@@ -1,1 +1,6 @@
 2024/08/12 10:28:43 listening on ****
+
+ubuntu@ip-172-31-47-55:~/getting-started-app$ docker exec -it csvserver /bin/sh
+printenv CSVSERVER_BORDER
+sh-4.4#
+
