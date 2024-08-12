@@ -6,8 +6,20 @@ services:
     container_name: csvserver
     ports:
       - "9393:9393"
-    env_file:
-      - csvserver.env
+    environment:
+      - CSVSERVER_BORDER=Orange
     volumes:
       - /home/ubuntu/getting-started-app/inputFile:/csvserver/inputdata
-    restart: unless-stopped
+
+  prometheus:
+    image: prom/prometheus:v2.45.2
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+
+# Define the volume if needed (optional, for persistent storage)
+# volumes:
+#   prometheus_data:
+#     driver: local
