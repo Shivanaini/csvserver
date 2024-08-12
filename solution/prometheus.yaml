@@ -1,0 +1,12 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'csvserver'
+    static_configs:
+      - targets: ['csvserver:9393']
+
+  - job_name: 'application'
+    static_configs:
+      - targets: ['csvserver:3000']
+    metrics_path: '/metrics'
