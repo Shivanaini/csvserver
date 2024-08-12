@@ -1,0 +1,2 @@
+ubuntu@ip-172-31-47-55:~/getting-started-app$ docker logs e220d76e1d5e
+2024/08/12 10:28:43 listening on ****
