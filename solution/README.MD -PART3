@@ -1,0 +1,11 @@
+Updated prometheus.yml Configuration File
+You should modify the prometheus.yml file to include the /metrics endpoint of your application. Here’s how you can do that:
+Update the prometheus.yml File
+
+Make sure you have the updated prometheus.yml file with the above configuration in the same directory as your docker-compose.yaml file.
+
+Ensure Your Application Exposes Metrics
+
+Verify that your application is correctly exposing metrics at the /metrics endpoint on port 3000. This might involve configuring your application to export Prometheus-compatible metrics.
+
+Update the docker-compose.yaml File
